@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Rai_Park</string>
+    <string name="mainpage_banner">Select Continent</string>
+    <string name="country_banner">Select Country</string>
+    <string-array name="list_continents">
+        <item>Africa</item>
+        <item>Americas</item>
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>Oceania</item>
+    </string-array>
 </resources>
