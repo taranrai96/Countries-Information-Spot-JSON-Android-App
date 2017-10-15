@@ -19,7 +19,6 @@ import java.util.ArrayList;
 
 
 public class CountrySelectActivity extends ListActivity {
-    int id_before;
     String selectedContinent;
     private String TAG = CountrySelectActivity.class.getSimpleName();
     private ProgressDialog pDialog;
@@ -30,8 +29,7 @@ public class CountrySelectActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        id_before = (Integer) getIntent().getExtras().get("id");
-        selectedContinent = getIntent().getExtras().getString("continentName");
+        selectedContinent = getIntent().getExtras().getString(getResources().getString(R.string.intent_continentName));
         countryList = new ArrayList<Country>();
         lv = getListView();
         new GetCountries().execute();
@@ -143,13 +141,13 @@ public class CountrySelectActivity extends ListActivity {
 
     protected void onListItemClick(ListView I, View v, int position, long id) {
         Intent i = new Intent(CountrySelectActivity.this, CountryDetailActivity.class);
-        i.putExtra("countrySelected_name",countryList.get((int)id).getName());
-        i.putExtra("countrySelected_capital",countryList.get((int)id).getCapital());
-        i.putExtra("countrySelected_region",countryList.get((int)id).getRegion());
-        i.putExtra("countrySelected_population",countryList.get((int)id).getPopulation());
-        i.putExtra("countrySelected_area",countryList.get((int)id).getArea());
-        i.putExtra("countrySelected_borders",countryList.get((int)id).getBorders());
-        i.putExtra("countrySelected_flag",countryList.get((int)id).getFlag());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_name),countryList.get((int)id).getName());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_capital),countryList.get((int)id).getCapital());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_region),countryList.get((int)id).getRegion());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_population),countryList.get((int)id).getPopulation());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_area),countryList.get((int)id).getArea());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_borders),countryList.get((int)id).getBorders());
+        i.putExtra(getResources().getString(R.string.intent_countrySelected_flag),countryList.get((int)id).getFlag());
         startActivity(i);
     }
 }

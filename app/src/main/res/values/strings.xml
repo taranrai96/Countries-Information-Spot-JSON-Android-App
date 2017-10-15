@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Rai_Park</string>
     <string name="mainpage_banner">Select Continent</string>
-    <string name="country_banner">Select Country</string>
     <string-array name="list_continents">
         <item>Africa</item>
         <item>Americas</item>
@@ -9,4 +8,19 @@
         <item>Europe</item>
         <item>Oceania</item>
     </string-array>
+    <string name="intent_continentName">continentName</string>
+    <string name="intent_countrySelected_name">countrySelected_name</string>
+    <string name="intent_countrySelected_capital">countrySelected_capital</string>
+    <string name="intent_countrySelected_region">countrySelected_region</string>
+    <string name="intent_countrySelected_population">countrySelected_population</string>
+    <string name="intent_countrySelected_area">countrySelected_area</string>
+    <string name="intent_countrySelected_borders">countrySelected_borders</string>
+    <string name="intent_countrySelected_flag">countrySelected_flag</string>
+    <string name="country_name">Name :&#160;</string>
+    <string name="country_capital">Capital :&#160;</string>
+    <string name="country_region">Region :&#160;</string>
+    <string name="country_population">Population :&#160;</string>
+    <string name="country_area">Area :&#160;</string>
+    <string name="country_borders">Borders :&#160;</string>
+
 </resources>

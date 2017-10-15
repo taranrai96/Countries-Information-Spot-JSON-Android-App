@@ -17,13 +17,9 @@ public class ContinentSelectActivity extends AppCompatActivity {
         list_continents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println("Clicked::::" + i + "\n");
                 Intent intent = new Intent(ContinentSelectActivity.this, CountrySelectActivity.class);
                 String selectedContinent = list_continents.getItemAtPosition(i).toString();
-                //System.out.println("____----____---___ " + selectedContinent + "   000000   ");
-                intent.putExtra("id",i);
-                intent.putExtra("continentName", selectedContinent);
-
+                intent.putExtra(getResources().getString(R.string.intent_continentName), selectedContinent);
                 startActivity(intent);
             }
         });

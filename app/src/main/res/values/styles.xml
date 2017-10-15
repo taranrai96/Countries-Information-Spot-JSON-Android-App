@@ -31,6 +31,7 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:textColor">#3A5684</item>
-        <item name="android:textSize">12pt</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_marginLeft">5dp</item>
     </style>
 </resources>
